@@ -1,0 +1,21 @@
+# Keep the build context small and never ship local state into the image.
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+*.db
+*.sqlite3
+__pycache__/
+*.py[cod]
+
+.git/
+.gitignore
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+README.md

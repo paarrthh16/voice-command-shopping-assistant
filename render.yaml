@@ -1,0 +1,14 @@
+# Render Blueprint: reproducible config for a fresh Web Service, so
+# redeploying does not depend on remembering the right dashboard settings.
+#
+# This file is optional -- creating the service by hand in the Render
+# dashboard (Docker runtime, free plan, no environment variables) works
+# identically. Nothing else in the app depends on this file existing.
+services:
+  - type: web
+    name: voice-command-shopping-assistant
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true

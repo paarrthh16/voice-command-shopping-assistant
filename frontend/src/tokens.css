@@ -1,0 +1,127 @@
+/* Apni Tokri design tokens.
+   Light palette on bare :root; dark redefines the same tokens under
+   prefers-color-scheme, guarded so an explicit [data-theme] always wins.
+   Components read tokens only — never a literal color. */
+
+:root {
+  --bg: #f5f6f3;
+  --surface: #fcfbf8;
+  --surface-raised: #ffffff;
+
+  --ink: #1b1f1c;
+  --ink-soft: #363b36;
+  --muted: #6b6f68;
+
+  --border: #ddd9cf;
+  --border-strong: #c7c2b4;
+
+  --primary: #2f4a3c;
+  --primary-strong: #223529;
+  --on-primary: #fcfbf8;
+
+  --accent: #a8763a;
+  --accent-strong: #8c6129;
+  --accent-soft: #efe3d1;
+
+  --success: #2f6844;
+  --success-soft: #e2ede4;
+  --warning: #c97c2c;
+  --warning-soft: #f5e6d3;
+  --error: #b14a3a;
+  --error-soft: #f4e0dc;
+
+  --tile-produce: #e7ede1;
+  --tile-dairy: #eaedf3;
+  --tile-bakery: #f3e9db;
+  --tile-bev: #e3edee;
+  --tile-snacks: #f5ead8;
+  --tile-personal: #efe5ec;
+  --tile-household: #eae8e2;
+  --tile-other: #ececea;
+
+  --shadow-bar: 0 1px 2px rgba(27, 31, 26, 0.05), 0 6px 16px -8px rgba(27, 31, 26, 0.14);
+  --shadow-tile: 0 3px 6px -3px rgba(20, 20, 15, 0.22);
+
+  --radius-row: 4px;
+  --radius-card: 8px;
+  --radius-tile: 6px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --speed-fast: 140ms;
+  --speed: 220ms;
+  --touch: 44px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14170f;
+    --surface: #1c2016;
+    --surface-raised: #21261a;
+
+    --ink: #ecead0;
+    --ink-soft: #d3d1c4;
+    --muted: #96988c;
+
+    --border: #33362a;
+    --border-strong: #454939;
+
+    --primary: #8fb39d;
+    --primary-strong: #a9ccb6;
+    --on-primary: #14170f;
+
+    --accent: #d3a264;
+    --accent-strong: #e3b879;
+    --accent-soft: #34291a;
+
+    --success: #7fb893;
+    --success-soft: #1e2a20;
+    --warning: #e0a25a;
+    --warning-soft: #2e2415;
+    --error: #db8776;
+    --error-soft: #2e1e1a;
+
+    --tile-produce: #212a1e; --tile-dairy: #1f2430; --tile-bakery: #2a2317;
+    --tile-bev: #1c2626; --tile-snacks: #2a2317; --tile-personal: #271e25;
+    --tile-household: #232620; --tile-other: #22241f;
+
+    --shadow-bar: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 16px -8px rgba(0, 0, 0, 0.5);
+    --shadow-tile: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #14170f;
+  --surface: #1c2016;
+  --surface-raised: #21261a;
+  --ink: #ecead0;
+  --ink-soft: #d3d1c4;
+  --muted: #96988c;
+  --border: #33362a;
+  --border-strong: #454939;
+  --primary: #8fb39d;
+  --primary-strong: #a9ccb6;
+  --on-primary: #14170f;
+  --accent: #d3a264;
+  --accent-strong: #e3b879;
+  --accent-soft: #34291a;
+  --success: #7fb893;
+  --success-soft: #1e2a20;
+  --warning: #e0a25a;
+  --warning-soft: #2e2415;
+  --error: #db8776;
+  --error-soft: #2e1e1a;
+  --tile-produce: #212a1e; --tile-dairy: #1f2430; --tile-bakery: #2a2317;
+  --tile-bev: #1c2626; --tile-snacks: #2a2317; --tile-personal: #271e25;
+  --tile-household: #232620; --tile-other: #22241f;
+  --shadow-bar: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 16px -8px rgba(0, 0, 0, 0.5);
+  --shadow-tile: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+}
